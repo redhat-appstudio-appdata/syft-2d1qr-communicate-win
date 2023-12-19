@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: syft
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/arewm-tenant/syft/syft@sha256:7b26774067c43149f50e20d5484330b431241df624de073181271e125a05810c
         imagePullPolicy: Always
         name: container-image
         ports:
