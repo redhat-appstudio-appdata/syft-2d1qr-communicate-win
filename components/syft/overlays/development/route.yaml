@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: syft
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: syft
+    app.kubernetes.io/part-of: syft
+  name: syfti4nr
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: syft
+    weight: 100
+status: {}
